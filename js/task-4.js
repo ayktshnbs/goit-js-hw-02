@@ -1,15 +1,21 @@
 function getShippingCost(country) {
   let message;
-  if (country === "China") {
-    message = "Shipping cost is 100 credits";
+  if (country === "Australia") {
+    message = "Shipping to Australia will cost 170 credits";
+  } else if (country === "China") {
+    message = "Shipping to China will cost 100 credits";
   } else if (country === "Chile") {
-    message = "Shipping cost is 250 credits";
-  } else if (country === "Australia") {
-    message = "Shipping cost is 170 credits";
+    message = "Shipping to Chile will cost 250 credits";
   } else if (country === "Jamaica") {
-    message = "Shipping cost is 120 credits";
+    message = "Shipping to Jamaica will cost 120 credits";
   } else {
     message = "Sorry, there is no delivery to your country";
   }
   return message;
 }
+console.log(getShippingCost("Australia")); // "Shipping to Australia will cost 170 credits"
+console.log(getShippingCost("Germany")); // "Sorry, there is no delivery to your country"
+console.log(getShippingCost("China")); // "Shipping to China will cost 100 credits"
+console.log(getShippingCost("Chile")); // "Shipping to Chile will cost 250 credits"
+console.log(getShippingCost("Jamaica")); // "Shipping to Jamaica will cost 120 credits"
+console.log(getShippingCost("Sweden")); // "Sorry, there is no delivery to your country"
